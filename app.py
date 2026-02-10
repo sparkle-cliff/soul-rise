@@ -6,7 +6,7 @@ import urllib.error
 import streamlit as st
 
 OPENROUTER_URL = "https://api.openrouter.ai/v1/chat/completions"
-OPENROUTER_API_KEY = ""
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
 def call_openrouter(messages, api_key, model="gpt-4o-mini"):
     payload = {

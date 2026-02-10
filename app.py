@@ -43,7 +43,7 @@ def call_openrouter(messages, api_key, model="gpt-4o-mini"):
 
 
 def main():
-    st.title("OpenRouter Chatbot (Streamlit)")
+    st.title(" Chatbot ")
     api_key = OPENROUTER_API_KEY
     st.sidebar.header("Settings")
     #api_key = st.sidebar.text_input("OpenRouter API Key", type="password", value=os.environ.get("OPENROUTER_API_KEY", ""))

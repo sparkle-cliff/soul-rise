@@ -8,7 +8,7 @@ import streamlit as st
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
-def call_openrouter(messages, api_key, model="gpt-4o-mini"):
+def call_openrouter(messages, api_key, model="z-ai/glm-4.5-air:free"):
     payload = {
         "model": model,
         "messages": messages,
@@ -47,7 +47,7 @@ def main():
     api_key = OPENROUTER_API_KEY
     st.sidebar.header("Settings")
     #api_key = st.sidebar.text_input("OpenRouter API Key", type="password", value=os.environ.get("OPENROUTER_API_KEY", ""))
-    model = st.sidebar.selectbox("Model", ["gpt-4o-mini", "gpt-4o"], index=0)
+    model = st.sidebar.selectbox("Model", ["z-ai/glm-4.5-air:free"], index=0)
 
     if not api_key:
         st.sidebar.warning("Set your OpenRouter API key here or set OPENROUTER_API_KEY env var.")
